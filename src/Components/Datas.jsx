@@ -8,7 +8,7 @@ export default function Datas() {
 
   useEffect(() => {
     axios(
-      "https://newsapi.org/v2/everything?q=keyword&apiKey=014d88281c274744b9b81b6aecf1c4cb"
+      "https://newsapi.org/v2/everything?q=tesla&from=2023-02-08&sortBy=publishedAt&apiKey=014d88281c274744b9b81b6aecf1c4cb"
     )
       .then((response) => {
         console.log(response.data.articles);
