@@ -5,10 +5,13 @@ import Template from "./Template";
 export default function Datas() {
   const [allData, setAllData] = useState([]);
   const [filteredData, setFilteredData] = useState(allData);
+  const [search, setSearch] = useState(allData);
 
   useEffect(() => {
     axios(
-      "https://newsapi.org/v2/everything?q=tesla&from=2023-02-08&sortBy=publishedAt&apiKey=014d88281c274744b9b81b6aecf1c4cb"
+      `https://newsapi.org/v2/top-headlines?q=${
+        search || "Indonesia"
+      }&apiKey=014d88281c274744b9b81b6aecf1c4cb`
     )
       .then((response) => {
         console.log(response.data.articles);
@@ -18,15 +21,16 @@ export default function Datas() {
       .catch((error) => {
         console.log("Error getting fake data: " + error);
       });
-  }, []);
+  }, [search]);
   const handleSearch = (event) => {
-    let article = event.target.value;
-    let result = [];
-    console.log(article);
-    result = allData.filter((data) => {
-      return data.title.search(article) !== -1;
-    });
-    setFilteredData(result);
+    setSearch(event.target.value);
+    // let article = event.target.value;
+    // let result = [];
+    // console.log(article);
+    // result = allData.filter((data) => {
+    //   return data.title.search(article) !== -1;
+    // });
+    // setFilteredData(result);
   };
   return (
     <>

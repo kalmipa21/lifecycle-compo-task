@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Card, Button, Col } from "react-bootstrap";
 import "./Datas";
 
@@ -17,7 +15,7 @@ function Template({ titles, descriptions, date, urls, urlToImages }) {
               {date}
             </Card.Subtitle>
             <Card.Text>{descriptions}</Card.Text>
-            <Button className="" href={urls} variant="primary">
+            <Button href={urls} variant="primary">
               Go somewhere
             </Button>
           </Card.Body>

@@ -1,8 +1,5 @@
 import React from "react";
-// import Template from "./Template";
 import Datas from "./Datas";
-// import FSearch from "./FSearch";
-// import Boxsearch from "./Boxsearch";
 class Search extends React.Component {
   render() {
     return (
