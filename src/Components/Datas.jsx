@@ -5,13 +5,13 @@ import Template from "./Template";
 export default function Datas() {
   const [allData, setAllData] = useState([]);
   const [filteredData, setFilteredData] = useState(allData);
-  const [search, setSearch] = useState(allData);
+  const [search, setSearch] = useState();
 
   useEffect(() => {
     axios(
-      `https://newsapi.org/v2/top-headlines?q=${
+      `https://newsapi.org/v2/everything?q=${
         search || "Indonesia"
-      }&apiKey=014d88281c274744b9b81b6aecf1c4cb`
+      }&apiKey=290e7b44129e4f8fa93f3c2afef91faa`
     )
       .then((response) => {
         console.log(response.data.articles);
