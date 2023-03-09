@@ -1,11 +1,11 @@
 import { Card, Button, Col } from "react-bootstrap";
 import "./Datas";
 import defaultImage from "./defaultImage.jpg";
-function Template({ titles, descriptions, date, urls, urlToImages }) {
+function Template({ titles, descriptions, date, urls, urlToImages, kunci }) {
   return (
     <>
       <Col md={4} sm={6} xl={2} none={12} className="mb-4 d-flex">
-        <Card style={{ width: "20rem" }}>
+        <Card className="w-100 h-100">
           <Card.Img variant="top" src={urlToImages || defaultImage} alt="" />
           <Card.Body>
             <Card.Title className="searchable">

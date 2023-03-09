@@ -42,10 +42,11 @@ export default function Datas() {
           onChange={(event) => handleSearch(event)}
         />
       </div>
-      {filteredData.map((article) => {
+      {filteredData.map((article, index) => {
         return (
           <>
             <Template
+              kunci={index}
               titles={article.title}
               descriptions={article.description}
               urls={article.url}
