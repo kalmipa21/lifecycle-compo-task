@@ -5,7 +5,7 @@ import Template from "./Template";
 export default function Datas() {
   const [allData, setAllData] = useState([]);
   const [filteredData, setFilteredData] = useState(allData);
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios(
