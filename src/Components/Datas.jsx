@@ -14,7 +14,7 @@ export default function Datas() {
       }&apiKey=290e7b44129e4f8fa93f3c2afef91faa`
     )
       .then((response) => {
-        console.log(response.data.articles);
+        // console.log(response.data.articles);
         setAllData(response.data.articles);
         setFilteredData(response.data.articles);
       })
